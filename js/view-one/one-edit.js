@@ -1,13 +1,3 @@
-/*! ***************************************************************************
- *
- * evolutility-ui-jquery :: one-edit.js
- *
- * View "one edit" to edit one backbone model.
- *
- * https://github.com/evoluteur/evolutility-ui-jquery
- * (c) 2017 Olivier Giulieri
- *
- *************************************************************************** */
 
 Evol.ViewOne.Edit = Evol.View_One.extend({
 

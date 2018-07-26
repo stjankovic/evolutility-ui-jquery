@@ -1,5 +1,5 @@
 /*!
-  evolutility-ui-jquery 1.2.2
+  evolutility-ui-jquery
   
   https://github.com/evoluteur/evolutility-ui-jquery
 */
@@ -710,12 +710,6 @@ body {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-.evo-pagination li[data-id="prev"] a, .evo-pagination li[data-id="next"] a {
-  font-size: 24px;
-  line-height: 23px;
-  padding: 1px 8px 4px;
 }
 
 /* --- cards --- */

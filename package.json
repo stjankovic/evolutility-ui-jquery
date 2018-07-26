@@ -7,8 +7,8 @@
   "homepage": "http://evoluteur.github.io/evolutility-ui-jquery/",
   "author": "Olivier Giulieri (https://evoluteur.github.io/)",
   "repository": {
-      "type": "git",
-      "url": "git://github.com/evoluteur/evolutility-ui-jquery.git"
+    "type": "git",
+    "url": "git://github.com/evoluteur/evolutility-ui-jquery.git"
   },
   "bugs": "https://github.com/evoluteur/evolutility-ui-jquery/issues",
   "resolutions": {
@@ -26,16 +26,16 @@
     "grunt-sass": "^2.0.0"
   },
   "keywords": [
-      "model",
-      "metadata",
-      "UI",
-      "forms",
-      "CRUD",
-      "Backbone",
-      "web",
-      "MDA",
-      "javascript",
-      "low-code",
-      "forms"
+    "model",
+    "metadata",
+    "UI",
+    "forms",
+    "CRUD",
+    "Backbone",
+    "web",
+    "MDA",
+    "javascript",
+    "low-code",
+    "forms"
   ]
 }

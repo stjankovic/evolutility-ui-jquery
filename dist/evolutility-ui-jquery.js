@@ -10,16 +10,16 @@ var Evol = Evol || {};
 Evol.Config = {
 
 	// --- using localStorage
-	localStorage: true,
+	//localStorage: true,
 
 	// --- using evolutility-server-node
-	//url: 'http://localhost:3000/api/v1/evolutility/'
+	url: 'http://localhost:3000/api/v1/evolutility/'
 
 };
 ;
 //   Evolutility-UI-jQuery Localization Library ENGLISH
 //   https://github.com/evoluteur/evolutility-ui-jquery
-//   (c) 2015 Olivier Giulieri
+//   (c) 2017 Olivier Giulieri
 
 var Evol = Evol || {};
 
@@ -598,7 +598,7 @@ Evol.Format = {
             dd={"error": "Evol.Format.jsonString"};
         }
         if(dd===''){
-            return  dd;
+            return dd;
         }else{
             //var txt=JSON.stringify(dd, null, '\t');
             var txt=JSON.stringify(dd, null, 2);
@@ -788,16 +788,7 @@ Evol.DOM = {
                 }
             });
             return opts;
-        }/*,
-
-         toggle: function  (items) {
-         var h=['<div class="btn-group" data-toggle="buttons">'];
-         _.each(items, function(item){
-         h.push('<label class="btn btn-info"><input type="radio" name="options" id="',item.id,'">',item.text,'</label>');
-         });
-         h.push('</div>');
-         return h.join('');
-         },*/
+        }
     },
 
     toggleCheckbox: function($cb, v){
@@ -824,13 +815,7 @@ Evol.DOM = {
     },
     buttonsPlusMinus: function(){
         return this.buttonsPlus()+this.buttonsMinus();
-    },/*
-    buttonsPrev: function(){
-        return this.buttonsIcon('bPrev', 'chevron-left');
     },
-    buttonsNext: function(){
-        return this.buttonsIcon('bNext', 'chevron-right');
-    },*/
 
     // --- links ---
     link: function (id, label, url, target) {
@@ -2018,7 +2003,7 @@ return Backbone.View.extend({
                 };
             h+='<li data-id="prev"'+
                 ((pId===1)?' class="disabled"':'')+
-                '><a href="javascript:void(0)">&laquo;</a></li>';
+                '><a href="javascript:void(0)">&lt;</a></li>';
             bPage(1);
             if(pId>4 && nbPages>6){
                 if(pId===5){
@@ -2038,7 +2023,7 @@ return Backbone.View.extend({
             }
             h+='<li data-id="next"'+
                 ((nbPages > pId) ? '' : ' class="disabled"')+
-                '><a href="javascript:void(0)">&raquo;</a></li>';
+                '><a href="javascript:void(0)">&gt;</a></li>';
         }
         return h;
     },
@@ -6221,13 +6206,14 @@ return Backbone.View.extend({
         var h,
             isReadOnly=this.readonly!==false,
             that=this,
+            itemName=this.uiModel.name||'item',
             domm=dom.menu,
             tb=this.buttons,
             menuDivider='<li class="divider" data-cardi="x"></li>',
             menuDividerH='<li class="divider-h"></li>';
 
         function menuItem (m, noLabel){
-            return domm.hItem(m.id, noLabel?'':m.label, m.icon, m.n);
+            return domm.hItem(m.id, noLabel?'':((m.label=='New'?'New '+itemName:m.label)), m.icon, m.n);
         }
         function menuItems (ms, noLabel){
             return _.map(ms, function(m){
@@ -6403,8 +6389,7 @@ return Backbone.View.extend({
                                 collection: this.collection,
                                 style: this.style,
                                 titleSelector: this.titleSelector,
-                                router: this.router//,
-                                //iconsPath: this.iconsPath || ''
+                                router: this.router
                             };
                             vw = new ViewClass(config).render();
                             break;

@@ -5,9 +5,9 @@ var Evol = Evol || {};
 Evol.Config = {
 
 	// --- using localStorage
-	localStorage: true,
+	//localStorage: true,
 
 	// --- using evolutility-server-node
-	//url: 'http://localhost:3000/api/v1/evolutility/'
+	url: 'http://localhost:3000/api/v1/evolutility/'
 
 };
